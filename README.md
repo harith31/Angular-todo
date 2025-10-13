@@ -1,3 +1,4 @@
+<img width="1919" height="1121" alt="Screenshot 2025-10-13 103908" src="https://github.com/user-attachments/assets/caad4d8e-0f46-4c7c-aa6d-a1ee30ea897e" />
 # Todo
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.
