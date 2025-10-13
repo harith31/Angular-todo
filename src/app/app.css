@@ -1,0 +1,9 @@
+:host {
+    display: block;
+    background-color: gray;
+    min-height: 100vh;
+}
+
+.list-group-item {
+    font-weight: 500;
+}

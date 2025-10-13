@@ -1,0 +1,66 @@
+<!-- Input Section -->
+<div class="container py-4">
+  <h1 class="text-center mb-4 text-warning"> Angular To-Do List App</h1>
+
+  <div class="input-group mb-3">
+   <input
+      class = "form-control"
+      type = "text"
+      placeholder = "Enter a new task"
+      [(ngModel)] = "newTask"
+      (keyup.enter) = "addTask()"
+    />
+    <button class="btn btn-primary" (click)="addTask()">Add</button>
+  </div>
+
+  <!-- Tasks to Do Section -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-info text-dark">
+      <h5 class="mb-0">Tasks to Do</h5>
+  </div>
+
+  <ul class="list-group list-group-flush">
+  <li
+    *ngFor="let task of tasks; let i = index"
+    class="list-group-item d-flex justify-content-between align-items-center"
+  >
+
+  <span>{{task}}</span>
+
+  <div>
+    <button class = "btn btn-success btn-sm me-2" (click)="finishTask(i)">
+      <i class="bi bi-check-circle"></i> Done
+    </button>
+
+      <button class="btn btn-danger btn-sm" (click)="deleteTask(i)">
+        <i class="bi bi-trash"></i> Delete
+      </button>
+    </div>
+  </li>
+</ul>
+
+  <div *ngIf="tasks.length === 0" class="card-body text-center text-muted">
+    <em>No Tasks Yet</em>
+  </div>
+</div>
+
+<!-- Finished Tasks Section -->
+<div class="card shadow-sm">
+  <div class="card-header bg-success text-dark">
+    <h5 class ="mb-0">Finished Tasks</h5>
+</div>
+
+<ul class="list-group list-group-flush">
+  <li
+    *ngFor="let finished of finishedTasks"
+    class="list-group-iterm text-muted text-decoration-line-through"
+  >
+    {{finished}}
+  </li>
+</ul>
+
+    <div *ngIf="finishedTasks.length === 0" class="card-body text-center text-muted">
+      <em>No Finished Tasks Yet</em>
+    </div>
+  </div>
+</div>
