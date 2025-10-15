@@ -1,8 +1,11 @@
+<img width="979" height="545" alt="Screenshot 2025-10-15 145931" src="https://github.com/user-attachments/assets/76bcc32e-0acf-4530-a655-81cc4a553a2b" />
+
+
 # Todo
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.
 
-## Development server<img width="979" height="545" alt="Screenshot 2025-10-15 145931" src="https://github.com/user-attachments/assets/31e57a5f-8f5e-4556-9201-204e99ad55fb" />
+## Development server
 
 
 To start a local development server, run:
@@ -51,7 +54,6 @@ For end-to-end (e2e) testing, run:
 
 ```bash
 ng e2e
-```![Uploading Screenshot 2025-10-15 145931.png…]()
 
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
