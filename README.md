@@ -1,9 +1,11 @@
-<img width="1919" height="1121" alt="Screenshot 2025-10-13 103908" src="https://github.com/user-attachments/assets/caad4d8e-0f46-4c7c-aa6d-a1ee30ea897e" />
+<img width="979" height="545" alt="Screenshot 2025-10-15 145931" src="https://github.com/user-attachments/assets/008bfe98-7a88-408f-ae6b-de0543432293" />
+
 # Todo
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.
 
-## Development server
+## Development server<img width="979" height="545" alt="Screenshot 2025-10-15 145931" src="https://github.com/user-attachments/assets/31e57a5f-8f5e-4556-9201-204e99ad55fb" />
+
 
 To start a local development server, run:
 
