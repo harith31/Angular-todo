@@ -1,9 +1,93 @@
-:host {
-    display: block;
-    background-color: gray;
-    min-height: 100vh;
+body {
+  background-color: #5f676e;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
-.list-group-item {
-    font-weight: 500;
+/* Container layout */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+h1 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ADD INPUT + BUTTON SECTION */
+.input-section {
+  gap: 10px;
+}
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(45deg, #ffc107, #ff9800);
+  color: #212121;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(45deg, #ffb300, #ff8f00);
+}
+
+/* CARDS */
+mat-card {
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  background-color: #fffbfb;
+}
+
+mat-card-header {
+  padding: 10px 16px;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+mat-card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.todo-header {
+  background-color: #17a2b8;
+}
+
+.finished-header {
+  background-color: #28a745;
+}
+
+/* LIST ITEMS */
+mat-list-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 8px 12px !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through;
+}
+
+/* BUTTON SPACING */
+button {
+  margin-left: 6px;
 }

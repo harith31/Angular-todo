@@ -1,8 +1,9 @@
-<!-- Input Section -->
 <div class="container py-4">
   <h1 class="text-center mb-4 text-warning"> Angular To-Do List App</h1>
 
-  <div class="input-group mb-3">
+  <!--BOOTSTRAP INPUT SECTION
+
+   /* <div class="input-group mb-3">
    <input
       class = "form-control"
       type = "text"
@@ -11,9 +12,29 @@
       (keyup.enter) = "addTask()"
     />
     <button class="btn btn-primary" (click)="addTask()">Add</button>
+  </div>  -->
+
+  <!-- ANGULAR-MATERIAL INPUT SECTION -->
+
+<div class="input-section d-flex align-items-center mb-4">
+    <mat-form-field appearance="outline" class="flex-grow-1">
+      <mat-label>Enter a new task</mat-label>
+      <input
+        matInput
+        [(ngModel)]="newTask"
+        (keyup.enter)="addTask()"
+        placeholder="What do you need to do?"
+      />
+    </mat-form-field>
+
+    <button mat-raised-button class="add-btn" (click)="addTask()">
+      <mat-icon>add_circle</mat-icon>
+      <span>Add</span>
+    </button>
   </div>
 
-  <!-- Tasks to Do Section -->
+  <!-- BOOTSTRAP TASKS TO DO SECTION
+
   <div class="card mb-4 shadow-sm">
     <div class="card-header bg-info text-dark">
       <h5 class="mb-0">Tasks to Do</h5>
@@ -42,11 +63,39 @@
   <div *ngIf="tasks.length === 0" class="card-body text-center text-muted">
     <em>No Tasks Yet</em>
   </div>
-</div>
+</div> -->
 
-<!-- Finished Tasks Section -->
+<!-- ANGULAR-MATERIAL TASKS TO DO SECTION -->
+  <mat-card>
+    <mat-card-header class="todo-header">
+      <mat-card-title>Tasks to Do</mat-card-title>
+    </mat-card-header>
+
+    <mat-list>
+      <mat-list-item *ngFor="let task of tasks; let i = index">
+        <div class="w-100 d-flex justify-content-between align-items-center">
+          <span>{{ task }}</span>
+          <div>
+            <button mat-raised-button color="accent" (click)="finishTask(i)">
+              <mat-icon>check_circle</mat-icon> Done
+            </button>
+            <button mat-raised-button color="warn" (click)="deleteTask(i)">
+              <mat-icon>delete</mat-icon> Delete
+            </button>
+          </div>
+        </div>
+      </mat-list-item>
+    </mat-list>
+
+    <mat-card-content *ngIf="tasks.length === 0" class="text-center text-muted">
+      <em>No Tasks Yet</em>
+    </mat-card-content>
+  </mat-card>
+
+<!-- BOOTSTRAP FINISHED TASKS SECTION 
+
 <div class="card shadow-sm">
-  <div class="card-header bg-success text-dark">
+  <div class="card-header bg-info text-light">
     <h5 class ="mb-0">Finished Tasks</h5>
 </div>
 
@@ -63,4 +112,25 @@
       <em>No Finished Tasks Yet</em>
     </div>
   </div>
+</div>  -->
+
+<!-- ANGULAR-MATERIAL FINISHED TASKS SECTION -->
+  <mat-card>
+    <mat-card-header class="finished-header">
+      <mat-card-title>Finished Tasks</mat-card-title>
+    </mat-card-header>
+
+    <mat-list>
+      <mat-list-item
+        *ngFor="let finished of finishedTasks"
+        class="text-muted text-decoration-line-through"
+      >
+        {{ finished }}
+      </mat-list-item>
+    </mat-list>
+
+    <mat-card-content *ngIf="finishedTasks.length === 0" class="text-center text-muted">
+      <em>No Finished Tasks Yet</em>
+    </mat-card-content>
+  </mat-card>
 </div>
