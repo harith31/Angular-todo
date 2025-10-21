@@ -1,5 +1,4 @@
-<img width="979" height="545" alt="Screenshot 2025-10-15 145931" src="https://github.com/user-attachments/assets/76bcc32e-0acf-4530-a655-81cc4a553a2b" />
-
+<img width="1604" height="820" alt="image" src="https://github.com/user-attachments/assets/1f4be41f-6913-4545-a068-23c8df24410b" />
 
 # Todo
 
