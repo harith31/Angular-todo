@@ -72,14 +72,14 @@
     </mat-card-header>
 
     <mat-list>
-      <mat-list-item *ngFor="let task of tasks; let i = index">
+      <mat-list-item *ngFor="let task of tasks;">
         <div class="w-100 d-flex justify-content-between align-items-center">
-          <span>{{ task }}</span>
+          <span>{{ task.todo }}</span>
           <div>
-            <button mat-raised-button color="accent" (click)="finishTask(i)">
+            <button mat-raised-button color="accent" (click)="finishTasks(task.id)">
               <mat-icon>check_circle</mat-icon> Done
             </button>
-            <button mat-raised-button color="warn" (click)="deleteTask(i)">
+            <button mat-raised-button color="warn" (click)="deleteTask(task.id)">
               <mat-icon>delete</mat-icon> Delete
             </button>
           </div>
@@ -115,22 +115,36 @@
 </div>  -->
 
 <!-- ANGULAR-MATERIAL FINISHED TASKS SECTION -->
-  <mat-card>
-    <mat-card-header class="finished-header">
-      <mat-card-title>Finished Tasks</mat-card-title>
-    </mat-card-header>
+<mat-card>
+  <mat-card-header class="finished-header">
+    <mat-card-title>Finished Tasks</mat-card-title>
+  </mat-card-header>
 
-    <mat-list>
-      <mat-list-item
-        *ngFor="let finished of finishedTasks"
-        class="text-muted text-decoration-line-through"
-      >
-        {{ finished }}
-      </mat-list-item>
-    </mat-list>
+  <mat-list>
+    <mat-list-item
+      *ngFor="let finished of finishedTasks"
+      class="d-flex justify-content-between align-items-center"
+    >
+      <div class="d-flex justify-content-between align-items-center w-100">
+        <span class="text-muted text-decoration-line-through">
+          {{ finished.todo }}
+        </span>
+        
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="deleteFinishedTask(finished.id)"
+        >
+          <mat-icon>delete</mat-icon> Delete
+        </button>
+      </div>
+    </mat-list-item>
+  </mat-list>
 
-    <mat-card-content *ngIf="finishedTasks.length === 0" class="text-center text-muted">
-      <em>No Finished Tasks Yet</em>
-    </mat-card-content>
-  </mat-card>
-</div>
+  <mat-card-content *ngIf="finishedTasks.length === 0" class="text-center text-muted">
+    <em>No Finished Tasks Yet</em>
+  </mat-card-content>
+</mat-card>
+
+
+
